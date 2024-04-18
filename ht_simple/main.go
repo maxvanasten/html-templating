@@ -1,4 +1,4 @@
-package HT_Simple
+package ht_simple
 
 import (
 	"fmt"
