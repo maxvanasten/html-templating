@@ -1,4 +1,4 @@
-package hte
+package ht
 
 import (
 	"fmt"
