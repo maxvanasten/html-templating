@@ -15,7 +15,11 @@ func ApplyData(input_file string, data map[string]string) ([]byte, error) {
 
 	output := string(input)
 	for key, value := range data {
-		output = strings.ReplaceAll(string(output), "{{"+key+"}}", value)
+		new_output := strings.ReplaceAll(string(output), "{{"+key+"}}", value)
+		if new_output == output {
+			fmt.Printf("[ht_simple]: Didn't find variable named \"%v\" in file \"%v\"\n", key, input_file)
+		}
+		output = new_output
 	}
 
 	return []byte(output), nil
