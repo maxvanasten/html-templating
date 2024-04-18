@@ -1,4 +1,4 @@
-package main
+package htsimple
 
 import (
 	"fmt"
