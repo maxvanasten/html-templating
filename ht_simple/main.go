@@ -7,6 +7,7 @@ import (
 )
 
 func ApplyData(input_file string, data map[string]string) ([]byte, error) {
+	fmt.Println("TEST")
 	input, err := os.ReadFile(input_file)
 	if err != nil {
 		fmt.Printf("Error while reading file: %v", err)
